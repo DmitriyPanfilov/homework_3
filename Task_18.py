@@ -16,4 +16,15 @@ while n > j:
     my_list.append(int(input('введите масива: ' )))
 
     j += 1
-x = int(input('Какое число будем искать? '))
+x = int(input('Введите искомое число: '))
+
+index_element = 0
+min_element = my_list[0]
+
+for i in range(1, n):
+    buffer_element = my_list[i]
+    if buffer_element < min_element:
+        min_element = buffer_element
+        index_element = i
+
+print(f"Самый близкий по величине элемент к заданному числу {my_list[index_element]}")
